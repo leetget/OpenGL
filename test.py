@@ -10,11 +10,12 @@ choice = 0  # По умолчанию — рисуем пружину
 bCull = False
 bDepth = True
 bOutline = False
+asdasdasdas = 0
 bEdgeFlag = True
 fire = [
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
     0x00, 0x00, 0x00, 0xc0, 0x00, 0x00, 0x01, 0xf0,
     0x00, 0x00, 0x07, 0xf0, 0x0f, 0x00, 0x1f, 0xe0,
     0x1f, 0x80, 0x1f, 0xc0, 0x0f, 0xc0, 0x3f, 0x80,
@@ -375,7 +376,7 @@ def PolygonStipple():
     glDisable(GL_POLYGON_STIPPLE)
     glPopMatrix()
 def TriangleExecuteMenu(option):
-    global bCull, bDepth, bOutline, choic
+    global bCull, bDepth, bOutline, choice
     
     if option == 0:  # Сброс к настройкам по умолчанию
         bCull = False
@@ -503,13 +504,11 @@ def SpecialKeys(key, x, y):
     glutPostRedisplay()
 
 # Обработка выбора из меню (если нужно)
-def ExecuteMenu(option,starOption):
+def ExecuteMenu(option):
     global choice, xRot, yRot
     xRot = 0.0
     yRot = 0.0
     choice = option
-           
-    
     
     glutPostRedisplay()
 
