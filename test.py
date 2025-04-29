@@ -8,9 +8,9 @@ xRot = 0.0
 yRot = 0.0
 choice = 0  # По умолчанию — рисуем пружину
 bCull = False
-bDepth = True
+bDepth = False
 bOutline = False
-asdasdasdas = 0
+
 bEdgeFlag = True
 fire = [
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
