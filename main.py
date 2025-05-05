@@ -1,6 +1,7 @@
 import numpy as np
-import cv2
-
+import matplotlib.pyplot as plt
+import cv2 
+#sudo apt-get install python3-tk (под убунту, иначе матплотлиб не отображает)
 def preprocess(image):
     blurred = cv2.GaussianBlur(image, (5, 5), 0) # шумодав
     ycrcb = cv2.cvtColor(blurred, cv2.COLOR_BGR2YCrCb) # YCrCb: Y — яркость (чёрно-белая часть), cr (красный оттенок), cb (синий оттенок)
